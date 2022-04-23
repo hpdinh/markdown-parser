@@ -6,9 +6,6 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 
 public class MarkdownParseTest {
-    Path fileName = Path.of(args[0]);
-    String content = Files.readString(fileName);
-    ArrayList<String> links = getLinks(content);
 
     @Test
     public void addition() {
@@ -16,10 +13,10 @@ public class MarkdownParseTest {
     }
 
     @Test
-    public void parseTest() {
-        String[] expected = new String[2];
-        expected[0] = "http://something.com";
-        expected[1] = "some-page.html";
+    public void parseTest() throws IOException{
+        ArrayList<String> expected = new ArrayList();
+        expected.add("https://something.com");
+        expected.add("some-thing.html");
         Path fileName = Path.of("test-file.md");
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
