@@ -16,8 +16,6 @@ public class MarkdownParse {
             ,currentIndex) == -1 || markdown.indexOf("(", currentIndex) == -1 ||
             markdown.indexOf(")", currentIndex) == -1)
                break;
-        if(markdown.indexOf("!") + 1 == markdown.indexOf("["))
-            break;
             int openBracket = markdown.indexOf("[", currentIndex);
             int closeBracket = markdown.indexOf("]", openBracket);
             int openParen = markdown.indexOf("(", closeBracket);
