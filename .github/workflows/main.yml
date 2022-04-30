@@ -33,5 +33,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           javac MarkdownParse.java
-          java MarkdownParse test-file2.md
+          java MarkdownParseTest.java
 
