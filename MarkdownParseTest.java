@@ -12,7 +12,7 @@ public class MarkdownParseTest {
         assertEquals(2, 1 + 1);
     }
 
-@Test
+    @Test
     public void parseTest() throws IOException{
         ArrayList<String> expected = new ArrayList();
         expected.add("https://something.com");
@@ -21,5 +21,10 @@ public class MarkdownParseTest {
         String content = Files.readString(fileName);
         ArrayList<String> links = MarkdownParse.getLinks(content);
         assertEquals(expected, links);
+    }
+    
+    @Test
+    public void fail() {
+        fail();
     }
 }
