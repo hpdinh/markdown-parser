@@ -32,5 +32,9 @@ public class MarkdownParseTest {
         assertEquals(expected, links);
     }
 
+    @Test
+    public void vimTest() {
+	assertEquals(3, 1+2);
+    }
 
 }
